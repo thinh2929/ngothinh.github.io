@@ -1,0 +1,155 @@
+html {
+    zoom: 100%;
+    max-width: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+* {
+    cursor: default;
+    user-select: none
+}
+
+a {
+    cursor: pointer;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.body_avatar {
+    top: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+.heart {
+    font-size: 100px;
+}
+
+.avatar {
+    width: 150px;
+    border-radius: 1000px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 5px solid black;
+    transition: 0.1s;
+}
+
+.background-wrapper {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    top: 0px;
+    position: absolute;
+    z-index: -999;
+}
+
+.bg {
+    top: 0px;
+}
+
+.bg1 {
+    top: 0;
+    position: absolute;
+    height: 1080px;
+}
+
+.bg2 {
+    top: 0;
+    position: absolute;
+    height: 1080;
+}
+
+.membrane {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    transition: 1s;
+}
+
+.information {
+    position: absolute;
+    top: 25%;
+    height: 60%;
+    width: 60%;
+    background-image: linear-gradient(45deg, white, rgb(255, 141, 215), rgb(135, 95, 255));
+    display: none;
+    flex-direction: column;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 20px 30px;
+    overflow: hidden;
+    animation: fadeIn ease-out 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        top: 50%;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.infor_header {
+    align-self: center;
+    text-shadow: 1px 1px #ffffff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.infor_container {
+    top: 20px;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    line-height: 35px;
+}
+
+.infor_column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.infor_wall {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 3px;
+    background-color: black;
+}
+
+.infors {
+    text-align: center;
+}
+
+.infor {
+    width: 100px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.infor_close {
+    position: absolute;
+    right: 3%;
+    cursor: pointer;
+    font-size: 140%;
+}
